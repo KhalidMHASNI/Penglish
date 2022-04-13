@@ -8,11 +8,6 @@ __pycache__
 myvenv/
 venv/
 
-# Database
-db.sqlite3
-
-# Static folder at project root
-/static/
 
 # macOS
 ._*
@@ -25,8 +20,3 @@ Thumbs.db*
 ehthumbs*.db
 [Dd]esktop.ini
 $RECYCLE.BIN/
-
-# Visual Studio
-.vscode/
-.history/
-*.code-workspace
