@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'BiLingoApp'
+    'BiLingoApp',
 ]
 
 MIDDLEWARE = [
@@ -74,7 +74,15 @@ WSGI_APPLICATION = 'BiLingo.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
-
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'OPTIONS': {
+            'service': 'my_service',
+            'passfile': '.my_pgpass',
+        },
+    }
+}
 
 
 # Password validation

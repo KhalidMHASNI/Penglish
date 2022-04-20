@@ -15,15 +15,15 @@
         <div class="forms-container">
             <div class="signin-signup">
                 <!--                    Sign in Forum                 -->
-                <form action="#" class="sign-in-form">
+                <form action="#" class="sign-in-form" method=POST>
                     <h2 class="title" id="titre1">Connectez-vous</h2>
                     <div class="input-field">
                         <i class="fas fa-user"></i>
-                        <input type="text" placeholder="Nom d'utilisateur" />
+                        <input type="text" placeholder="Nom d'utilisateur" name="username"/>
                     </div>
                     <div class="input-field">
                         <i class="fas fa-lock"></i>
-                        <input type="password" placeholder="Mot de passe" />
+                        <input type="password" placeholder="Mot de passe" name="password"/>
                     </div>
                     <input class="btn solid" type="submit" value="Connecter" />
                     <p class="social-text">Ou Inscrivez-vous avec les plateformes sociales</p>
@@ -47,19 +47,19 @@
                     <h2 class="title" id="titre">Inscrivez-vous</h2>
                     <div class="input-field" id="formulaire">
                         <i class="fas fa-user"></i>
-                        <input type="text" placeholder="Nom d'utilisateur" />
+                        <input type="text" placeholder="Nom d'utilisateur" name="username"/>
                     </div>
                     <div class="input-field" id="formulaire">
                         <i class="fas fa-envelope"></i>
-                        <input type="email" placeholder="Email" />
+                        <input type="email" placeholder="Email" name="email"/>
                     </div>
                     <div class="input-field" id="formulaire">
                         <i class="fas fa-lock"></i>
-                        <input type="password" placeholder="Mot de passe" />
+                        <input type="password" placeholder="Mot de passe" name="password"/>
                     </div>
                     <div class="input-field" id="formulaire">
                         <i class="fas fa-lock"></i>
-                        <input type="password" placeholder="Confirmer Mot de passe" />
+                        <input type="password" placeholder="Confirmer Mot de passe" name="password"/>
                     </div>
                     <input type="submit" class="btn" value="Inscrire" id="formulaire"/>
                     <p class="social-text" id="formulaire1">Ou Inscrivez-vous avec les plateformes sociales</p>
