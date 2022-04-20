@@ -7,7 +7,7 @@
     <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="{% static 'css/Signinup.css' %}" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign in & Sign up Form</title>
+    <title>Connexion ou inscription</title>
 </head>
 
 <body>
@@ -16,17 +16,17 @@
             <div class="signin-signup">
                 <!--                    Sign in Forum                 -->
                 <form action="#" class="sign-in-form">
-                    <h2 class="title">Sign in</h2>
+                    <h2 class="title" id="titre1">Connectez-vous</h2>
                     <div class="input-field">
                         <i class="fas fa-user"></i>
-                        <input type="text" placeholder="Username" />
+                        <input type="text" placeholder="Nom d'utilisateur" />
                     </div>
                     <div class="input-field">
                         <i class="fas fa-lock"></i>
-                        <input type="password" placeholder="Password" />
+                        <input type="password" placeholder="Mot de passe" />
                     </div>
-                    <input class="btn solid" type="submit" value="Login" />
-                    <p class="social-text">Or Sign in with social platforms</p>
+                    <input class="btn solid" type="submit" value="Connecter" />
+                    <p class="social-text">Ou Inscrivez-vous avec les plateformes sociales</p>
                     <div class="social-media">
                         <a href="#" class="social-icon">
                             <i class="fab fa-facebook-f"></i>
@@ -44,22 +44,26 @@
                 </form>
                 <!--                    Sign up Forum                 -->
                 <form action="#" class="sign-up-form">
-                    <h2 class="title">Sign up</h2>
-                    <div class="input-field">
+                    <h2 class="title" id="titre">Inscrivez-vous</h2>
+                    <div class="input-field" id="formulaire">
                         <i class="fas fa-user"></i>
-                        <input type="text" placeholder="Username" />
+                        <input type="text" placeholder="Nom d'utilisateur" />
                     </div>
-                    <div class="input-field">
+                    <div class="input-field" id="formulaire">
                         <i class="fas fa-envelope"></i>
                         <input type="email" placeholder="Email" />
                     </div>
-                    <div class="input-field">
+                    <div class="input-field" id="formulaire">
                         <i class="fas fa-lock"></i>
-                        <input type="password" placeholder="Password" />
+                        <input type="password" placeholder="Mot de passe" />
                     </div>
-                    <input type="submit" class="btn" value="Sign up" />
-                    <p class="social-text">Or Sign up with social platforms</p>
-                    <div class="social-media">
+                    <div class="input-field" id="formulaire">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" placeholder="Confirmer Mot de passe" />
+                    </div>
+                    <input type="submit" class="btn" value="Inscrire" id="formulaire"/>
+                    <p class="social-text" id="formulaire1">Ou Inscrivez-vous avec les plateformes sociales</p>
+                    <div class="social-media" id="formulaire1">
                         <a href="#" class="social-icon">
                             <i class="fab fa-facebook-f"></i>
                         </a>
@@ -80,21 +84,21 @@
         <div class="panels-container">
             <div class="panel left-panel">
                 <div class="content">
-                    <h3>New here ?</h3>
+                    <h3>Nouveau Ici ?</h3>
                     <p>
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis, ex ratione. Aliquid!
+                        Rejoiniez nous dans la meilleur formation de la langue Anglaise
                     </p>
-                    <button class="btn transparent" id="sign-up-btn">Sign up</button>
+                    <button class="btn transparent" id="sign-up-btn">Inscrire</button>
                 </div>
                 <img src="{% static 'img/Signin1.svg' %}" class="image" alt="" />
             </div>
             <div class="panel right-panel">
                 <div class="content">
-                    <h3>One of us ?</h3>
+                    <h3>Un de nous ?</h3>
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum laboriosam ad deleniti.
+                       Bah ! Rebienvenue dans votre plateforme pour se étudier la langue Anglaise
                     </p>
-                    <button class="btn transparent" id="sign-in-btn">Sign in</button>
+                    <button class="btn transparent" id="sign-in-btn">Connecter</button>
                 </div>
                 <img src="{% static 'img/Signin2.svg'%}" class="image" alt="" />
             </div>
