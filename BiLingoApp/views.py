@@ -47,3 +47,8 @@ def SigninupPage(request):
 			return redirect('Signinup')
 	else: 
 		return render(request, 'Signinup.html')
+
+def logout(request):
+	if request.method=='POST':
+		auth.logout(request)
+		return redirect('Signinup')

@@ -8,4 +8,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('Signinup/',views.SigninupPage, name="Signinup"),
     path('Signinup/index',views.formation),
+    path('logout/',views.logout),
 ]
