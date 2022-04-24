@@ -1,9 +1,11 @@
-import imp
-from xml.etree.ElementInclude import include
-from django.urls import path
+from django.urls import path, include
+from django.contrib import admin
 from . import views
 
+app_name = 'BiLingoApp'
+
 urlpatterns = [
-    path('Signinup/',views.SigninupPage),
-    path('Signinup/',include('django.contrib.auth.urls')),
+    path('admin/', admin.site.urls),
+    path('Signinup/',views.SigninupPage, name="Signinup"),
+    path('Signinup/index',views.formation),
 ]
