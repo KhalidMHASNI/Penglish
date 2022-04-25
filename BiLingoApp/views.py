@@ -7,6 +7,10 @@ from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User,auth
 from django.contrib import messages
 
+#home page 
+def home(request):
+	return render(request,'home.html')
+
 #formation page
 def formation(request) : 
 	return render(request,'index.html')
@@ -26,7 +30,7 @@ def SigninupPage(request):
 				messages.warning(request,'Email taken')
 				return redirect('Signinup')
 			else :
-				myuser = User.objects.create_user(username=email+str(1), email=email,first_name=first_name,last_name=last_name ,password=password1)
+				myuser = User.objects.create_user(username=email, email=email,first_name=first_name,last_name=last_name ,password=password1)
 				myuser.save()
 				messages.success(request, "Votre compte est crée .")
 				return redirect('Signinup')
@@ -34,16 +38,15 @@ def SigninupPage(request):
 			messages.info(request,'password not matching')
 			return redirect('Signinup')
 	if request.method== 'POST' and 'btnform1' in request.POST:
-		email = request.POST['username']+str(1)
+		email = request.POST['username']
 		password = request.POST['password']
 		user = auth.authenticate(username=email,password=password) 
 
 		if user is not None:
 			auth.login(request,user)
-			print("GG")
 			return render(request,'index.html')
 		else :
-			print("ERROR 404")
+			messages.info(request,"Password missmatchs")
 			return redirect('Signinup')
 	else: 
 		return render(request, 'Signinup.html')

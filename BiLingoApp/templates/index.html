@@ -1,4 +1,14 @@
-<h2>HIIIIIIII {{user.first_name}} {{user.last_name}} {{user.score}}</h2>
-<form type="post">
-    <input type="submit" value="Logout" name="logout"/>
+<h2>HIIIIIIII {{user.profile.score}} {{user.first_name}} {{user.last_name}} </h2>
+
+<form>
+    <p>Calculate 1+2 :</p>
+    <input type="number" name="sum" id="sum">
+    <input type="submit" value="Calculate" onclick="scoreAdd()">
 </form>
+<script>
+    let x = document.getElementById("sum");
+    if(x==3){
+        user.profile.score +=1;
+    }
+</script>
+<p>{{user.profile.score}}</p>
