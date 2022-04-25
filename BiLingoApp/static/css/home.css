@@ -33,7 +33,7 @@
 }
 
 :root {
-    --primaryColor: green;
+    --primaryColor: rgb(6, 158, 6);
     --secondaryColor-1: rgb(1, 60, 1);
     --secondaryColor-2: rgb(0, 199, 0);
     --bgColor-1: rgb(222, 235, 222);
@@ -300,18 +300,17 @@ nav ul li {
 }
 
 .home .container-images {
-    width: 45%;
-    height: 90%;
-    position: block;
-    align-self: flex-end;
+    width: 30%;
+    height: 80%;
+    position: relative;
 }
 
 .home .container-images img {
     position: absolute;
-    bottom: 0;
+    bottom: 60px;
     height: 102%;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(-60%);
     transition: bottom 1s, left 1s;
 }
 
@@ -376,11 +375,13 @@ nav ul li {
 }
 
 .aboutus .container-images img {
-    width: 65%;
+    width: 69%;
+    position: relative;
+    margin-top: 50px;
 }
 
 .aboutus .container-texts {
-    width: 35%;
+    width: 55%;
 }
 
 
