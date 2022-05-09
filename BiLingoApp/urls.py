@@ -5,9 +5,9 @@ from . import views
 app_name = 'BiLingoApp'
 
 urlpatterns = [
-    path('',views.home),
+    path('',views.home, name="home"),
     path('admin/', admin.site.urls),
     path('Signinup/',views.SigninupPage, name="Signinup"),
-    path('Signinup/index',views.formation),
-    path('logout/',views.logout),
+    path('index/',views.index, name="index"),
+    path('index/logout',views.logout, name="logout"),
 ]

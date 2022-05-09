@@ -1,4 +1,5 @@
 from distutils.command.upload import upload
+from email.policy import default
 from math import fabs
 # User model 
 from django.db import models
@@ -9,7 +10,7 @@ from django.core.exceptions import ObjectDoesNotExist
 
 class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    score = models.IntegerField(default=0)
+    score = models.IntegerField(default=0,null=False)
 
 @receiver(post_save, sender=User)
 def create_user_profile(sender, instance, created, **kwargs):

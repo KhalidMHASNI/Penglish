@@ -6,14 +6,11 @@ from django.contrib.auth import login, authenticate
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User,auth
 from django.contrib import messages
+from .models import Profile
 
 #home page 
 def home(request):
 	return render(request,'home.html')
-
-#formation page
-def formation(request) : 
-	return render(request,'index.html')
 
 #Signup  page
 def SigninupPage(request):
@@ -44,14 +41,18 @@ def SigninupPage(request):
 
 		if user is not None:
 			auth.login(request,user)
-			return render(request,'index.html')
+			return redirect('index')
 		else :
-			messages.info(request,"Password missmatchs")
+			messages.error(request,"Password missmatchs")
 			return redirect('Signinup')
 	else: 
 		return render(request, 'Signinup.html')
 
+
+#formation page
+def index(request) : 
+	return render(request,'index.html')
+
 def logout(request):
-	if request.method=='POST':
-		auth.logout(request)
-		return redirect('Signinup')
+	auth.logout(request)
+	return render(request,'home.html')
