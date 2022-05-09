@@ -55,4 +55,4 @@ def index(request) :
 
 def logout(request):
 	auth.logout(request)
-	return render(request,'home.html')
+	return redirect('home')

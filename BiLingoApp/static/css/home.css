@@ -191,10 +191,7 @@ nav {
 }
 
 nav img {
-    width: 80px;
     position: relative;
-    margin-right: -13.5rem;
-    margin-top: -0.8rem;
 }
 
 nav ul li {
@@ -339,7 +336,6 @@ nav ul li {
     cursor: pointer;
     transition: 0.9s;
 }
-
 .home em:hover {
     color: var(--bgColor-2);
 }
@@ -715,4 +711,12 @@ footer img {
     h3 {
         margin-bottom: 70px;
     }
+}
+.minilogo .img1{
+    grid-area: img1;
+    width: 250px;
+    margin-top: 50px;
+}
+.minilogo .img2{
+    grid-area: img2;
 }
