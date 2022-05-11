@@ -183,8 +183,8 @@ p {
 nav {
     /*background-color:var(--bgColor-1)*/
     padding-top: 0rem;
-    padding-left: var(--padding);
-    padding-right: var(--padding);
+    padding-left: 10%;
+    padding-right: 10%;
     display: flex;
     justify-content: space-between;
     align-items: center;
