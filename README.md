@@ -1,5 +1,5 @@
 INSTALATION
-  1. git clone https://github.com/KhalidMHASNI/BiLingo/
+  1. git clone https://github.com/KhalidMHASNI/Penglish/
   2. $ pip install virtualenv                   
   3. $ virtualenv env                          //Create a vrtual environnment
   4. $ . env/bin/activate                      //Activate the virtual environment             
