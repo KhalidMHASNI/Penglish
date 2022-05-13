@@ -6,7 +6,12 @@ from django.contrib.auth import login, authenticate
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User,auth
 from django.contrib import messages
+from django.http import JsonResponse
+from urllib3 import HTTPResponse
 from .models import Profile
+from .models import *
+
+import random
 
 #home page 
 def home(request):
@@ -56,3 +61,41 @@ def index(request) :
 def logout(request):
 	auth.logout(request)
 	return redirect('home')
+
+#Test page 
+def test(request):
+	return render(request,'test.html')
+
+#{
+#	'status': True
+#	'data' :[
+#		{},
+#	]
+#}
+
+def get_quiz(request):
+	try:
+		question_objs = list(Question.objects.all())
+		data= []
+		random.shuffle((question_objs))
+		for question_obj in question_objs:
+
+			data.append({
+
+				"category": question_obj.category.category_name,
+				"question": question_obj.question,
+				"marks": question_obj.marks,
+				"answers":question_obj.getanswers()
+				
+			})
+
+		payload ={'status': True , 'data':data } 
+
+		return JsonResponse(payload)
+
+
+
+	except Exception as e:
+		print(e)
+
+	return HTTPResponse("Something went wrong")
