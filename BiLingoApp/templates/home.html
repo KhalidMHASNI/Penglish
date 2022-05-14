@@ -17,8 +17,8 @@
     <script src="{% static 'js/home.js'%}"></script>
     <section class="home" id="home">
         <header>
-            <nav><img src="{% static 'img/logodark.png'%}" style="height: auto;width: 69px; margin-top:-1.5rem; margin-right:-200px;">
-                <ul style="margin-left:42%">
+            <nav><img src="{% static 'img/logodark.png'%}" style="height: auto;width: 69px; margin-top:-1.5rem; margin-right:-300px;">
+                <ul id="action" style="margin-left:42%">
                     <li><a href="#" class="hover-underline-animation">Acceuil</a></li>
                     <li><a href="#lessons" class="hover-underline-animation">Nos Lessons </a></li>
                     <li><a href="#aboutus" class="hover-underline-animation">Propos de nous</a></li>
@@ -26,6 +26,13 @@
                 </ul>
                 <em onclick="myFunction()" class="fa-solid fa-moon" style="margin-right:35px;"></em>
                 <a href="Signinup" class="btn">Se connecter</a>
+                <!-- new button hamburger -->
+                <button id="menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <!-- end -->
             </nav>
         </header>
         <div class="content">
@@ -320,8 +327,8 @@
                 </p>
             </div>
         </div>
-        </div>
     </footer>
+
 </body>
 
 </html>
