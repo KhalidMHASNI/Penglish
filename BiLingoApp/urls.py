@@ -10,6 +10,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('Signinup/',views.SigninupPage, name="Signinup"),
     path('index/',views.index, name="index"),
+    path('formation/',views.formation),
     path('certifhtml/',views.certif),
     path('index/logout',views.logout, name="logout"),
 ]

@@ -27,7 +27,9 @@ from .utils import render_to_pdf
 def home(request):
 	return render(request,'home.html')
 
-
+#formation page 
+def formation(request):
+	return render(request,'formation.html')
 #Signup  page
 def SigninupPage(request):
 	if request.method=='POST' and 'btnform2' in request.POST: 
