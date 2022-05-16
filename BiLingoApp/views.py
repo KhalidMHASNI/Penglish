@@ -17,6 +17,7 @@ import random
 def home(request):
 	return render(request,'home.html')
 
+
 #Signup  page
 def SigninupPage(request):
 	if request.method=='POST' and 'btnform2' in request.POST: 
