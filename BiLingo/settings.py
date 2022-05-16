@@ -69,6 +69,7 @@ TEMPLATES = [
     },
 ]
 
+
 WSGI_APPLICATION = 'BiLingo.wsgi.application'
 
 
@@ -78,7 +79,7 @@ WSGI_APPLICATION = 'BiLingo.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'glapp',
+        #'NAME': 'glapp',
         'USER': 'postgres',
         'PASSWORD': 'mhasni10',
         'HOST':'localhost'
