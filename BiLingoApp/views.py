@@ -92,10 +92,6 @@ def get_quiz(request):
 		payload ={'status': True , 'data':data } 
 
 		return JsonResponse(payload)
-
-
-
 	except Exception as e:
 		print(e)
-
 	return HTTPResponse("Something went wrong")
