@@ -43,14 +43,14 @@ function myFunction() {
     
     // To check the scroll position on page load
     reveal();
-
+    //burger menu
     const menuu = document.getElementById("menu");
     const action = document.getElementById("action");
 
     menuu.addEventListener("click", ()=>{
       hundleMenu();
     })
-    
+
     function hundleMenu(){
       menuu.classList.toggle("is-active");
       action.classList.toggle("is-active");

@@ -1,4 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+@keyframes gradient {
+    0%{
+      background-position: 0 50%;
+    }
+    50%{
+      background-position: 100% 50%;
+    }
+    100%{
+      background-position: 0 50%;
+    }
+}  
 @keyframes fade-bottom {
     0% {
         transform: translateY(50px);
@@ -130,11 +141,11 @@ span {
 }
 
 #abt {
-    color: var(--bgColor-1);
+    color: var(--bgColor-2);
 }
 
 #us {
-    color: var(--primaryColor);
+    color: white;
 }
 
 #etu {
@@ -167,7 +178,11 @@ p {
 *******************************************/
 
 .home {
-    background-color: #49B265;
+    background: linear-gradient(50deg, #61c9c2, #29a39b, #24a29a, #1b8b84, #0e6e68);
+    background-size: 400% 400%;
+    animation: gradient 6s infinite ease-in-out ;
+    transition: 1.8s ease-in-out;
+    z-index: 6;
     width: 100%;
     height: 100vh;
     display: flex;
@@ -186,12 +201,12 @@ p {
 
 .dark-mode .home {
     transition: 1s;
-    background-color: #333333;
+    background-color:linear-gradient(50deg, #333333, #333336, black, grey, #333350) ;
 }
 
 nav {
     /*background-color:var(--bgColor-1)*/
-    padding-top: 0rem;
+    padding-top: 1rem;
     padding-left: 10%;
     padding-right: 10%;
     display: flex;
@@ -210,7 +225,7 @@ nav ul li {
 }
 
 .home nav ul li a {
-    color: #06373a;
+    color: white;
     text-decoration: none;
     text-transform: capitalize;
     transition: 0.4s;
@@ -263,14 +278,13 @@ nav ul li {
 }
 
 .btn {
-    background-color: #49B265;
     color: white;
     text-decoration: none;
     font-weight: bold;
     padding: 0.81rem 0.87rem;
     border-radius: 50px;
     border: 2px solid var(--bgColor-2);
-    transition: 0.9s;
+    transition: 0.1s;
 }
 
 .dark-mode .btn {
@@ -281,11 +295,38 @@ nav ul li {
 
 .btn:hover {
     color: white;
-    background-color: #1F5F5B;
-    border: 2px solid #1F5F5B;
+    background-color: var(--bgColor-2);
+    border: 2px solid var(--bgColor-2);
 }
 
 .dark-mode .btn:hover {
+    background-color: var(--primaryColor);
+    color: var(--footerColor);
+    border: 2px solid var(--primaryColor);
+}
+.btn2 {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.81rem 0.87rem;
+    border-radius: 50px;
+    border: 2px solid var(--bgColor-2);
+    transition: 0.1s;
+}
+
+.dark-mode .btn2 {
+    color: var(--secondaryColor-2);
+    border: 2px solid var(--primaryColor);
+    background-color: #333333;
+}
+
+.btn2:hover {
+    color: white;
+    background-color: var(--bgColor-2);
+    border: 2px solid var(--bgColor-2);
+}
+
+.dark-mode .btn2:hover {
     background-color: var(--primaryColor);
     color: var(--footerColor);
     border: 2px solid var(--primaryColor);
@@ -339,14 +380,13 @@ nav ul li {
     color: var(--secondaryColor-1);
     margin: 2rem;
     text-decoration: none;
-    background-color: #49B265;
     border-radius: 100px;
-    border: 2px solid #49B265;
+    border: 2px solid linear-gradient(50deg, #61c9c2, #29a39b, #24a29a, #1b8b84, #0e6e68);
     cursor: pointer;
     transition: 0.9s;
 }
 .home em:hover {
-    color: var(--bgColor-2);
+    color: black;
 }
 
 .dark-mode .home em {
@@ -365,7 +405,7 @@ nav ul li {
 *******************************************/
 
 .aboutus {
-    background-color: #159947;
+    background-color: var(--bgColor-1);
     padding: 2rem var(--padding);
     display: flex;
     align-items: center;
@@ -384,6 +424,7 @@ nav ul li {
 
 .aboutus .container-texts {
     width: 55%;
+    color: white;
 }
 
 
@@ -689,10 +730,10 @@ footer img {
     display: block;
     width: 33px;
     height: 4px;
-    background-color: var(--bgColor-2);
+    background-color: var(--bgColor-1);
     border-radius: 6px;
     transform-origin: 0 0;
-    transition: 0.9s;
+    transition: 0.2s;
     margin-bottom: 5px;
 }
 #menu.is-active span:nth-child(1){
@@ -706,7 +747,7 @@ footer img {
     transform: translate(-3px, 3px) rotate(-45deg); 
 }
 #menu.is-active span {
-    background-color: red;
+    background-color: var(--footerColor);
 }
 
 
@@ -730,6 +771,9 @@ footer img {
     .home em {
         display: none;
     }
+    .btn2 {
+        visibility: visible;
+    }
     h1:hover{
         display: none;
     }
@@ -740,12 +784,12 @@ footer img {
         right: 0;
         height: 82px;
         padding-top: 0;
-        background-color: var(--primaryColor);
-        border-bottom: 1px solid var(--primaryColor);
+        background-color: var(--bgColor-2);
+        border-bottom: 1px solid var(--bgColor-2);
         z-index: 100;
     }
     .hover-underline-animation:after {
-        background-color: var(--footerColor);
+        background-color: var(--primaryColor);
     }
     nav>a {
         display: none;
@@ -757,7 +801,8 @@ footer img {
         left: 0;
         width: 100vw;
         height: 100vh;
-        background-color: var(--secondaryColor-1);    
+        background-color: var(--bgColor-2); 
+        opacity: 0.95;   
     }
     nav ul.is-active {
         display: block;
@@ -766,7 +811,7 @@ footer img {
         display: block;
         text-align: left;
         margin: 50px;
-        background-color: var(--secondaryColor-1);
+        background-color: var(--bgColor-2);
     }
     .home nav ul li a{
         color: white;
@@ -794,9 +839,7 @@ footer img {
         flex-wrap: wrap;
         gap: 1rem;
     }
-    .team_section img{
-        display: none;
-    }
+
     footer .content-footer h4{
         width: 100%;
         text-align: center;
@@ -804,7 +847,6 @@ footer img {
     footer .content-footer p{
         width: 100%;
     }
-
 
 }
 
@@ -824,6 +866,9 @@ footer img {
    .home em {
        display: none;
    }
+   .btn2 {
+       visibility: visible;
+   }
    .content {
        padding-top: 82px;
    }
@@ -837,12 +882,12 @@ footer img {
        right: 0;
        height: 82px;
        padding-top: 0;
-       background-color: var(--primaryColor);
-       border-bottom: 1px solid var(--primaryColor);
+       background-color: var(--bgColor-2);
+       border-bottom: 1px solid var(--bgColor-2);
        z-index: 100;
    }
    .hover-underline-animation:after {
-       background-color: var(--footerColor);
+       background-color: var(--primaryColor);
    }
    nav>a {
        display: none;
@@ -854,7 +899,7 @@ footer img {
        left: 0;
        width: 100vw;
        height: 100vh;
-       background-color: var(--secondaryColor-1);    
+       background-color: var(--bgColor-2);    
    }
    nav ul.is-active {
        display: block;
@@ -863,7 +908,7 @@ footer img {
        display: block;
        text-align: left;
        margin: 50px;
-       background-color: var(--secondaryColor-1);
+       background-color: var(--bgColor-2);
    }
    .home nav ul li a{
        color: white;
@@ -890,9 +935,6 @@ footer img {
        justify-content: center;
        flex-wrap: wrap;
        gap: 1rem;
-   }
-   .team_section img{
-       display: none;
    }
    footer .content-footer h4{
        width: 100%;
@@ -921,6 +963,9 @@ footer img {
     .home em {
         display: none;
     }
+    .btn2 {
+        visibility: visible;
+    }
     h1:hover{
         display: none;
     }
@@ -931,12 +976,12 @@ footer img {
         right: 0;
         height: 82px;
         padding-top: 0;
-        background-color: var(--primaryColor);
-        border-bottom: 1px solid var(--primaryColor);
+        background-color: var(--bgColor-2);
+        border-bottom: 1px solid var(--bgColor-2);
         z-index: 100;
     }
     .hover-underline-animation:after {
-        background-color: var(--footerColor);
+        background-color: var(--primaryColor);
     }
     nav>a {
         display: none;
@@ -948,7 +993,7 @@ footer img {
         left: 0;
         width: 100vw;
         height: 100vh;
-        background-color: var(--secondaryColor-1);    
+        background-color: var(--bgColor-2);    
     }
     nav ul.is-active {
         display: block;
@@ -957,7 +1002,7 @@ footer img {
         display: block;
         text-align: left;
         margin: 50px;
-        background-color: var(--secondaryColor-1);
+        background-color: var(--bgColor-2);
     }
     .home nav ul li a{
         color: white;
@@ -1017,6 +1062,9 @@ footer img {
     .home em {
         display: none;
     }
+    .btn2 {
+        visibility: visible;
+    }
     h1:hover{
         display: none;
     }
@@ -1027,12 +1075,12 @@ footer img {
         right: 0;
         height: 82px;
         padding-top: 0;
-        background-color: var(--primaryColor);
-        border-bottom: 1px solid var(--primaryColor);
+        background-color: var(--bgColor-2);
+        border-bottom: 1px solid var(--bgColor-2);
         z-index: 100;
     }
     .hover-underline-animation:after {
-        background-color: var(--footerColor);
+        background-color: var(--primaryColor);
     }
     nav>a {
         display: none;
@@ -1044,7 +1092,7 @@ footer img {
         right: 0;
         width: 50vw;
         height: 100vh;
-        background-color: var(--secondaryColor-1);    
+        background-color: var(--bgColor-2);    
     }
     nav ul.is-active {
         display: block;
@@ -1053,7 +1101,7 @@ footer img {
         display: block;
         text-align: left;
         margin: 50px;
-        background-color: var(--secondaryColor-1);
+        background-color: var(--bgColor-2);
     }
     .home nav ul li a{
         color: white;
