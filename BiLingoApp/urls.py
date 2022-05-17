@@ -9,7 +9,7 @@ urlpatterns = [
     path('',views.home, name="home"),
     path('admin/', admin.site.urls),
     path('Signinup/',views.SigninupPage, name="Signinup"),
-    path('formation/',views.formation, name="formation"),
+    path('formation/',views.formation),
     path('certifhtml/',views.certif),
     path('index/logout',views.logout, name="logout"),
     path('api/get-quiz/', views.get_quiz , name="get_quiz"),
