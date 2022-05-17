@@ -4,3 +4,4 @@ urllib3
 Pillow
 reportlab
 utils
+xhtml2pdf

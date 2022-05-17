@@ -27,9 +27,7 @@ from .utils import render_to_pdf
 def home(request):
 	return render(request,'home.html')
 
-#formation page 
-def formation(request):
-	return render(request,'formation.html')
+
 #Signup  page
 def SigninupPage(request):
 	if request.method=='POST' and 'btnform2' in request.POST: 
@@ -59,17 +57,16 @@ def SigninupPage(request):
 
 		if user is not None:
 			auth.login(request,user)
-			return redirect('index')
+			return redirect('formation')
 		else :
 			messages.error(request,"Password missmatchs")
 			return redirect('Signinup')
 	else: 
 		return render(request, 'Signinup.html')
 
-
-#formation page
-def index(request) : 
-	return render(request,'index.html')
+#formation page 
+def formation(request):
+	return render(request,'formation.html')
 
 def logout(request):
 	auth.logout(request)

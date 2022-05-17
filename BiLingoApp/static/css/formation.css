@@ -174,7 +174,11 @@ section
   bottom: 69%;
   float: right;
   margin-top: -3rem;
-  margin-right: -3rem;
+  margin-right: 70px;
+}
+.introsvg img{
+  width: 365px;
+  margin-right: -50%;
 }
 .introform{
   font-size: 1.5rem;
@@ -208,13 +212,11 @@ section
   font-weight: bold;
   padding: 10px 20px;
   transition: 0.3s ease-in-out;
-  margin-left: 25%;
   border-radius: 30px;
 }
 .btncom:hover{
   background-color: var(--clr);
   color: white;
-  transform: translateX(-60%);
   transition: 0.3s ease-in-out;
   box-shadow: 0 0 35px var(--clr);
 }
