@@ -18,7 +18,4 @@ urlpatterns = [
     path('certifpdf/', GeneratePdf.as_view()),
 
     #test
-    path('api/get-quiz/', views.get_quiz , name="get_quiz"),
-    path('test/',views.test, name="test"),
-    path("pretest/",views.pretest, name="quiz"),
 ]
