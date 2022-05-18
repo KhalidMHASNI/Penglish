@@ -5,3 +5,4 @@ Pillow
 reportlab
 utils
 xhtml2pdf
+django-extensions

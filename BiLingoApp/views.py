@@ -104,12 +104,32 @@ def certif(request):
 #		{},
 #	]
 #}
+def pretest(request):
+	context={'categories':Category.objects.all()}
+
+	if request.GET.get('category'):
+  		return redirect(f"/quiz/?category={request.GET.get('category')}")
+
+	return render(request, 'quiz.html', context)
+
+
+def test(request):
+	context={'categories':request.GET.get('category')}
+	
+
+	return render(request, 'test.html', context)
+
+#
+
 
 def get_quiz(request):
 	try:
-		question_objs = list(Question.objects.all())
+		question_objs = Question.objects.all()
+
+		question_objs = question_objs.filter(category__category_name__icontains="Grammar-Conjugation-Lexicon")
+		question_objs = list(question_objs)
 		data= []
-		random.shuffle((question_objs))
+		random.shuffle(question_objs)
 		for question_obj in question_objs:
 
 			data.append({
