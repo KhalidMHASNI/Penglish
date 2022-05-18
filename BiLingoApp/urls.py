@@ -9,8 +9,8 @@ urlpatterns = [
     path('',views.home, name="home"),
     path('admin/', admin.site.urls),
     path('Signinup/',views.SigninupPage, name="Signinup"),
-    path('formation/',views.formation),
-    path('index/logout',views.logout, name="logout"),
+    path('formation/',views.formation, name="formation"),
+    path('formation/logout',views.logout, name="logout"),
     
     #certif
     path('certifhtml/',views.certif),

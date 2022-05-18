@@ -112,7 +112,8 @@ header svg{
 .dropdown-content {
   display: none;
   position: absolute;
-  top: 100%;
+  width: 95%;
+  top: 90%;
   right: -14%;
   background-color: #f9f9f9;
   min-width: 160px;
@@ -125,7 +126,6 @@ header svg{
   color: black;
   padding: 12px 16px;
   text-decoration: none;
-  font-weight: bold;
   display: block;
   text-align: left;
 }
