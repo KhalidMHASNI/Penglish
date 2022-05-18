@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'BiLingoApp',
+    'django_extensions',
 ]
 
 MIDDLEWARE = [
@@ -79,7 +80,7 @@ WSGI_APPLICATION = 'BiLingo.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'glapp',
+        #'NAME': 'glapp',
         'USER': 'postgres',
         'PASSWORD': 'mhasni10',
         'HOST':'localhost'
