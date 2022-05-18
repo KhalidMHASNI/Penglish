@@ -1,4 +1,3 @@
-
 import random
 from django.shortcuts import redirect, render
 #pre-built form utilities libraries
@@ -21,6 +20,11 @@ from django.views.generic import View
 from django.template.loader import get_template
 #import render_to_pdf from util.py 
 from .utils import render_to_pdf 
+
+from django.contrib import messages
+from django.contrib.auth import update_session_auth_hash
+from django.contrib.auth.forms import PasswordChangeForm
+from django.shortcuts import render, redirect
 
 #########################################################
 #home page 
@@ -71,6 +75,24 @@ def formation(request):
 def logout(request):
 	auth.logout(request)
 	return redirect('home')
+
+
+#change password
+# def change_password(request):
+#     if request.method == 'POST':
+#         form = PasswordChangeForm(request.user, request.POST)
+#         if form.is_valid():
+#             user = form.save()
+#             update_session_auth_hash(request, user)  # Important!
+#             messages.success(request, 'Your password was successfully updated!')
+#             return redirect('Signinup')
+#         else:
+#             messages.error(request, 'Please correct the error below.')
+#     else:
+#         form = PasswordChangeForm(request.user)
+#     return render(request, 'formation.html', {
+#         'form': form
+#     })
 
 
 #pdf
@@ -131,7 +153,7 @@ def get_quiz(request):
 		data= []
 		random.shuffle(question_objs)
 		for question_obj in question_objs:
-
+			
 			data.append({
 
 				"category": question_obj.category.category_name,
