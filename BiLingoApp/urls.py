@@ -11,6 +11,11 @@ urlpatterns = [
     path('Signinup/',views.SigninupPage, name="Signinup"),
     path('formation/',views.formation, name="formation"),
     path('formation/logout',views.logout, name="logout"),
+
+    path('formation/popup',views.popup, name="popup"),
+    path('certifhtml/',views.certif),
+    
+    path('index/logout',views.logout, name="logout"),
     
     #certif
     path('certifhtml/',views.certif),
@@ -19,4 +24,5 @@ urlpatterns = [
 
     #test
     path('testfinal/', views.testfinal, name="testfinal"),
+
 ]

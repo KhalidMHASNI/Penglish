@@ -62,5 +62,12 @@ $dropdownMenu3.addEventListener('click', (e) => {
   $checkbox3.dispatchEvent(new Event('change'));
 });
 
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+} 
 
 
