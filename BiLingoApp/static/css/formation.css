@@ -138,8 +138,7 @@ header svg{
   background:none;
   text-decoration: none;
   padding: 0.4rem 0.5rem;
-  margin-top: 1.5rem;
-  margin-left: 37rem;
+  margin-left: 35rem;
   border-radius: 25px;
   border: 2px solid var(--bgColor-2);
   transition: 0.1s;
