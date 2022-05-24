@@ -76,7 +76,9 @@ def logout(request):
 	auth.logout(request)
 	return redirect('home')
 
-
+def testfinal(request):
+	return render(request,'testfinal.html')
+	
 #change password
 # def change_password(request):
 #     if request.method == 'POST':

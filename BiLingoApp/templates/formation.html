@@ -11,6 +11,7 @@
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
     <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" rel="stylesheet"  type='text/css'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    
     <link rel="icon" type="image/png" href="{% static 'img/logo.png'%}"/>
     <title>P-english - Formation</title>
 </head>
@@ -30,7 +31,9 @@
           </div>
          </ul>
     </header>
+    
     <section>
+
         <div class="introform">
             <p class="titre">Formation</p>
             <p class="para">Notre formation de la langue anglaise couvre les notions de base de la grammaire,conjugaison et lexique</p>
@@ -52,7 +55,7 @@
     </section>
     <div class="sec" id="forma">
         <h2>Formation</h2>
-        <div class="dropdown-container" >
+        <div class="dropdown-container">
                 <label for="openDropdown" class="dropdown" ><img  src="https://img.icons8.com/external-others-cattaleeya-thongsriphong/64/000000/external-Learn-online-learning-outline-others-cattaleeya-thongsriphong.png"/>
                     <p class="nom">Cours/TD</p>
                     <svg class="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!-- Font Awesome Pro 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) --><path d="M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z"/></svg>
@@ -87,15 +90,18 @@
                   <span>Cours3</span>
               </div>
             </div>
-            <label for="openDropdown" class="dropdown" ><img src="data:image/png;base64,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"/>
+            <label for="openDropdown" class="dropdown" ><img style="height:85px;" src="data:image/png;base64,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"/>
                 <p class="nom">Examen Finale</p>
-                <button class="btn">Passer l'examen</button>
+                <div ><button class="btn" style="cursor:pointer;">Start Quiz</button></div>
+                                 
             </label>
-            <label for="openDropdown" class="dropdown" ><img src="https://img.icons8.com/external-smashingstocks-detailed-outline-smashing-stocks/66/000000/external-certificate-accounting-smashingstocks-detailed-outline-smashing-stocks.png"/>
+            <label for="openDropdown" class="dropdown" ><img style="height:85px;" src="https://img.icons8.com/external-smashingstocks-detailed-outline-smashing-stocks/66/000000/external-certificate-accounting-smashingstocks-detailed-outline-smashing-stocks.png"/>
                 <p class="nom">Certification</p>
                 <button href="Signinup" class="btnCer" >Obtenir Certification</button>
             </label>
         </div>
     </div>
+
+    
 </body>
 </html>

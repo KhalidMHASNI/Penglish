@@ -18,4 +18,5 @@ urlpatterns = [
     path('certifpdf/', GeneratePdf.as_view()),
 
     #test
+    path('testfinal/', views.testfinal, name="testfinal"),
 ]
